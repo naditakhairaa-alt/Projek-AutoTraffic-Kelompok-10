@@ -6,7 +6,7 @@ from structure.tree import TreeKlasifikasi
 from structure.graph import GraphPeta
 
 from util.lane import Lane
-from util.lampu_lalin import LampuLalin
+from util.lalin import LampuLalin
 from util.user_interface import judul, baris, tampil_dashboard
 from util.file_handler import simpan_json, muat_json, simpan_laporan_txt
 from util.def_menu import (menu_tambah_kendaraan, menu_tambah_batch, menu_undo, menu_simulasi_lampu, inisialisasi_graph_default)
