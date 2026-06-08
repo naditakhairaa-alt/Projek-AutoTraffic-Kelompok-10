@@ -1,4 +1,4 @@
-# UI di menu nanti...
+# UI di menu nanti
 
 def baris(k="═", n=70):
     print(k * n)

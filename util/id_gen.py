@@ -1,10 +1,10 @@
 # Generator ID unik kendaraan (VID - Vehicle ID)
 
-_vid_counter = [0] #mendeklarasikan variabel untuk id kendaraan 
+_vid_counter = [0] # mendeklarasikan variabel untuk id kendaraan 
 
 def buat_vid():
     '''membuat function generator id kendaraan'''
-    _vid_counter[0] += 1 #menambah setiap counter sebesar 1
+    _vid_counter[0] += 1 # menambah setiap counter sebesar 1
     return f"V-{_vid_counter[0]:04d}" 
 
 def sinkron_vid(ht):

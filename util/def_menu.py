@@ -8,6 +8,7 @@ from util.merge_sort import merge_sort_tunggu
 from util.searching import linear_search_vid, binary_search_tunggu
 from util.user_interface import judul, input_int, baris
 
+
 def menu_tambah_kendaraan(lanes, ht, undo_stack, tree):
     """Tambah kendaraan ke jalur tertentu."""
     judul("TAMBAH KENDARAAN")
