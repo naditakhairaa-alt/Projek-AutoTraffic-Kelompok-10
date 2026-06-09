@@ -8,25 +8,24 @@ from util.merge_sort import merge_sort_tunggu
 from util.searching import linear_search_vid, binary_search_tunggu
 from util.user_interface import judul, input_int, baris
 
-
 def menu_tambah_kendaraan(lanes, ht, undo_stack, tree):
     """Tambah kendaraan ke jalur tertentu."""
     judul("TAMBAH KENDARAAN")
     print("  Jalur: 1=Utara  2=Timur  3=Selatan  4=Barat")
-    pilih = int(input("  Pilih jalur: ", 1, 4))
+    pilih = input_int("  Pilih jalur: ", 1, 4)
     if pilih is None:
         return
     nama_jalur = ["Utara", "Timur", "Selatan", "Barat"][pilih - 1]
 
-    print(f"\n  Jenis kendaraan: {', '.join(Kendaraan.kendaraan)}") # memanggil variabel kendaraan dari class kendaraan dan memisahkannya dengan ","
+    print(f"\n  Jenis kendaraan: {', '.join(Kendaraan.kendaraan)}")
     jenis = input("  Jenis (Enter=mobil): ").strip().lower() or "mobil"
     if jenis not in Kendaraan.kendaraan:
         print(f"  ✗ Jenis tidak valid. Gunakan: {', '.join(Kendaraan.kendaraan)}")
         return
 
     kec_default = {"mobil": 60, "motor": 80, "truk": 40, "bus": 50, "ambulans": 100}
-    kecepatan = int(input(f"  Kecepatan km/h (Enter={kec_default[jenis]}): ",
-                           minimum=1, maksimum=200))
+    kecepatan = input_int(f"  Kecepatan km/h (Enter={kec_default[jenis]}): ",
+                           minimum=1, maksimum=200)
     if kecepatan is None:
         kecepatan = kec_default[jenis]
 
